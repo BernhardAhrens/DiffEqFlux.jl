@@ -89,7 +89,7 @@ function multiple_shoot(
             # Ensure continuity between last state in previous prediction
             # and current initial condition in ode_data
             loss +=
-    continuity_term * continuity_loss(group_predictions[i - 1][:, end], u[:, 1], p)
+    continuity_term * continuity_loss(group_predictions[i - 1][:, end], u[:, 1], p, tsteps[rg])
         end
     end
 
